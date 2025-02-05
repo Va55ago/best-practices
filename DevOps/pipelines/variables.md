@@ -1,7 +1,7 @@
-# Pipeline Variables
+# Azure DevOps Pipeline Variables
 In terms of CI/CD pipelines, variables are non-secret values that can vary (hence the name) between different instances of the application being deployed. In most instances, these different instances are running in different environments and the variables are therefore often referred to generically as “environment variables” (this is despite this term clashing with the operating system concept of environment variables).
 
-# Best Practice #1: Minimise variables
+## Best Practice #1: Minimise variables
 Ideally, you want to minimise the number of variables that need to be provided to each instance of the application during deployment.  This is because misconfigurations are one of the biggest causes of bugs and security incidents so reducing the the surface area for misconfigurations can greatly improve the security posture of the application whilst also minimising a whole class of possible bugs.
 
 Strategies to avoid the need for configuration variables include:
@@ -46,7 +46,7 @@ The recommendation here is to use YAML variable templates. Doing this has severa
 5. Complex variables
   Variables defined in YAML can have any type, including complex objects. In contrast, variables defined in the pipeline itself, or in linked variable groups, are always interpreted as strings.
 
-# Best Practice #3: Don't treat all variables as secrets
+## Best Practice #3: Don't treat all variables as secrets
 Historically, some development teams have decided that all configuration variables should be treated as if they were secrets (encrypted or stored in a Key Vault etc). This decision often stems from a desire to reduce complexity in the code. I.e. if some variables are secret, then storing _all_ variables the same way means the code only needs one mechanism to access them. However, doing this can have serious detrimental impacts when it comes to the supportability of the application.
 
 For example: When a problem occurs with a running application, it is often necessary for an operations team member to access the environment to diagnose the issue. They will request a temporary role over that environment, allowing them to view the application logs, metrics & configuration. However, if all the configuration values are stored as secrets, that team member will not - by default - be able to view any of the configuration values.
