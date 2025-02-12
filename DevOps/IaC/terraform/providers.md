@@ -1,6 +1,6 @@
 # Terraform Provider Versions
 
-## Best Practice #1: ALways use the same versions of all terraform providers when deploying a particular version of your application
+## Best Practice #1: Always use the same versions of all terraform providers when deploying a particular version of your application
 When you run `terraform init`, terraform determines what providers you have referenced and evaluates any version constraints you have applied. Once it has determined the appropriate set. You really want the same versions of the same set of providers to be used every time you deploy a particular version of your application. Later versions of providers may contain bugs or breaking changes and you don't want to be finding out about them for the first time when deploying to your production environment.
 
 To enable this, you want to ensure that you use the same terraform lock file in each of the CD stages of your pipeline. When you run `terraform init`, a `terraform.lock` file is generated containing details of the selected providers and versions. You want this lock file to be present every time you run `terraform init` in each stage of your pipeline. To do this:
