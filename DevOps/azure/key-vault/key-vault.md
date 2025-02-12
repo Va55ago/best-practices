@@ -22,7 +22,7 @@ Azure Key Vaults have a native capability that can send emails to a list of spec
 
 To enable these emails, first define the list of "Contact" email addresses that should be alerted when certificate reaches a lifetime event and then update each certificate to specify the appropriate "lifetime action" that should be taken:
 
-![Screenshot of Key Vault Lifetime Action Policy](./images/key-vault-lifetime-action-screenshot.png)
+![Screenshot of Key Vault Lifetime Action Policy](./.images/key-vault-lifetime-action-screenshot.png)
 
 Alert emails can be sent to all contacts after a specific percentage of the certificate lifetime has elapsed, or a specific number of days prior to the certificate expiry date.
 
