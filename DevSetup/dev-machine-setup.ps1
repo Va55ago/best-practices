@@ -2,6 +2,7 @@
 winget install Microsoft.Edge
 winget install Google.Chrome
 winget install Mozilla.Firefox
+winget install Zen-Team.Zen-Browser
 
 # Chat
 winget install Microsoft.Teams
@@ -21,13 +22,16 @@ winget install JanDeDobbeleer.OhMyPosh
 winget install Git.Git
 winget install GitHub.cli
 winget install Microsoft.DotNet.SDK.9
+winget install Python.Python.3.13
 winget install Docker.DockerDesktop
+winget install Docker.DockerCompose
 winget install OpenJS.NodeJS
 winget install Yarn.Yarn
 winget install Microsoft.AzureCLI
 Install-Module -Name Az -AllowClobber -Scope CurrentUser -Force -Confirm:$false
 winget install Hashicorp.Terraform
 winget install Microsoft.Azure.AztfExport
+winget install Postman.Postman
 
 # IDE
 winget install Microsoft.VisualStudio.2022.Enterprise
