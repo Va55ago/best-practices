@@ -45,6 +45,7 @@ winget install JetBrains.WebStorm
 winget install JetBrains.DataGrip
 
 # Miscellaneous
+winget install Skillbrains.Lightshot
 winget install Nodepad++.Notepad++
 winget install 7zip.7zip
 winget install dotPDN.PaintDotNet
