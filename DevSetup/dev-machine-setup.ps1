@@ -18,6 +18,9 @@ winget install Microsoft.WindowsTerminal
 winget install Microsoft.PowerShell
 winget install JanDeDobbeleer.OhMyPosh
 
+Set-PSRepository PSGallery -InstallationPolicy Trusted
+Set-PSResourceRepository PSGallery -Trusted
+
 # Development Tools
 winget install Git.Git
 winget install GitHub.cli
@@ -28,7 +31,7 @@ winget install Docker.DockerCompose
 winget install OpenJS.NodeJS
 winget install Yarn.Yarn
 winget install Microsoft.AzureCLI
-Install-Module -Name Az -AllowClobber -Scope CurrentUser -Force -Confirm:$false
+Install-PSResource -Name Az -Repository PSGallery -Scope CurrentUser -Force
 winget install Hashicorp.Terraform
 winget install Microsoft.Azure.AztfExport
 winget install Postman.Postman
